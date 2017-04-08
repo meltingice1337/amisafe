@@ -4,7 +4,7 @@
         <span style="font-size:20px"> safest country</span>
     </p>
     <ul class="list-group">
-        <li *ngFor="let aspect of aspects" style="border-radius:0px;border-collapse:collapse" class="col-md-6 list-group-item justify-content-between aspectcell">
+        <li (click)="requestGraph(aspect.type)"*ngFor="let aspect of aspects" style="border-radius:0px;border-collapse:collapse" class="col-md-6 list-group-item justify-content-between aspectcell">
             {{aspect?.label}}
             <span *ngFor="let feature of aspect.features">
                 <span *ngIf="feature.title=='percentage'" style="float:right;margin-left:5px"class="badge badge-default badge-pill">{{feature.value}} %</span>

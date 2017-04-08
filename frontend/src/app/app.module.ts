@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Ng2CompleterModule } from "ng2-completer";
+import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule, routingComponents } from './app.routing';
@@ -17,7 +18,8 @@ import { AppRoutingModule, routingComponents } from './app.routing';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    Ng2CompleterModule
+    Ng2CompleterModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

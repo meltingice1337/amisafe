@@ -21,7 +21,7 @@ const routes: Routes = [
                 path: "",
                 component: InfoComponent
             }, {
-                path: "charts/piechart",
+                path: "charts/:aspect_type",
                 component: ChartComponent
             }
         ]

@@ -9,5 +9,9 @@ export class CountryInfoService {
         return this.http.get('http://192.168.0.100:4567/api/v1/aspects/' + country)
             .map((res) => res.json());
     }
+    requestGraphData(type){
+        return this.http.get('http://192.168.0.100:4567/api/v1/aspects/' + type)
+            .map((res) => res.json());
+    }
 
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild, Inject, OnDestroy } from '@angular/core';
 import { CountryInfoService } from './countryinfo.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 
 @Component({
   selector: 'countryinfo',
@@ -15,10 +15,12 @@ export class CountryComponent implements OnInit, OnDestroy {
   aspects: any;
   iso: String;
   private sub: any;
+  aspect_type;
 
   constructor(
     private countryInfoService: CountryInfoService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private router:Router) { }
 
   public ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
@@ -34,9 +36,11 @@ export class CountryComponent implements OnInit, OnDestroy {
       }
     });
   }
-
   public ngOnDestroy() {
     this.sub.unsubscribe();
+  }
+  public requestGraph(aspect_type){
+    this.router.navigate(["/charts/"+aspect_type.toLowerCase()])
   }
 }
 
