@@ -23,6 +23,7 @@ public class Server {
         });
         path("/api/v1", () -> {
             get("/aspects/:id",   (req, res)  -> CountryController.getCountryData(req.params(":id")));
+            get("/aspect/:type", (req,res) -> CountryController.getAspect(req.params(":type")));
             get("/countries", (req,res) -> CountryController.getAllCountries());
         });
     }

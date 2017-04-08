@@ -8,6 +8,7 @@ import com.rethinkdb.net.Cursor;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by meltingice on 08-Apr-17.
@@ -34,6 +35,15 @@ public class CountryController {
         Cursor<HashMap> result =  RethinkDB.getInstance().r.
                 db("maindb")
                 .table("countries")
+                .run( RethinkDB.getInstance().getConnection());
+        return RethinkDB.getInstance().objectToJson(result.toList());
+    }
+
+    public static String getAspect(String aspect) {
+        Cursor<HashMap>   result =  RethinkDB.getInstance().r.
+                db("maindb")
+                .table("data")
+                .filter( (t) -> t.g("type").eq(aspect))
                 .run( RethinkDB.getInstance().getConnection());
         return RethinkDB.getInstance().objectToJson(result.toList());
     }
