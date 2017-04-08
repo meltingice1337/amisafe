@@ -1,5 +1,6 @@
-import { Component, OnInit, ElementRef, ViewChild, Inject, AfterViewInit } from '@angular/core';
-import { CountryInfoService} from './countryinfo.service';
+import { Component, OnInit, ElementRef, ViewChild, Inject, OnDestroy } from '@angular/core';
+import { CountryInfoService } from './countryinfo.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'countryinfo',
@@ -8,19 +9,34 @@ import { CountryInfoService} from './countryinfo.service';
   providers: [CountryInfoService]
 
 })
-export class CountryComponent {
+export class CountryComponent implements OnInit, OnDestroy {
+
   country: any;
   aspects: any;
   iso: String;
-  constructor(private countryInfoService:CountryInfoService) { }
-    ngAfterViewInit(){
-      this.countryInfoService.getCountryInfo().subscribe(
-        (data)=>{
-          this.country=data;
-          this.aspects=data.aspects;
-         
-        }
-      )
-    } 
+  private sub: any;
+
+  constructor(
+    private countryInfoService: CountryInfoService,
+    private route: ActivatedRoute) { }
+
+  public ngOnInit() {
+    this.sub = this.route.params.subscribe(params => {
+      let country = params['country'];
+      if (country != "chart") {
+        this.countryInfoService.getCountryInfo(country).subscribe(
+          (data) => {
+            console.log(data)
+            this.country = data;
+            this.aspects = data.aspects;
+          }
+        );
+      }
+    });
+  }
+
+  public ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
 }
 

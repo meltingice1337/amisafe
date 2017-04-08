@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { CountryComponent } from './country/countryinfo.component';
 import { InfoComponent } from './main/info.component';
+import { ChartComponent } from './chart/chart.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,9 @@ const routes: Routes = [
             }, {
                 path: "",
                 component: InfoComponent
+            }, {
+                path: "charts/piechart",
+                component: ChartComponent
             }
         ]
     }
@@ -32,4 +36,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents = [SearchComponent, MainComponent, CountryComponent,InfoComponent];
+export const routingComponents = [SearchComponent, MainComponent, CountryComponent,InfoComponent,ChartComponent];

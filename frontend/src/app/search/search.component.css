@@ -22,8 +22,13 @@
 .backgroundcontainer{
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 100%;
-    animation: fadein 5s;
+    transition:1s;
+    filter:grayscale(30%);
+}
+.backgroundcontainer:hover{
+    filter:grayscale(50%);
 }
 
 @media screen and (max-width: 992px) {
@@ -32,3 +37,4 @@
         padding-top:50px;
     }
 }
+

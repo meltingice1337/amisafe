@@ -8,7 +8,7 @@
             {{aspect?.label}}
             <span *ngFor="let feature of aspect.features">
                 <span *ngIf="feature.title=='percentage'" style="float:right;margin-left:5px"class="badge badge-default badge-pill">{{feature.value}} %</span>
-            <span *ngIf="feature.title!='percentage'" style="float:right" class="badge badge-default badge-pill"> {{feature.title.toUpperCase() }} : {{feature.value}}</span>
+            <span *ngIf="feature.title!='percentage'" style="float:right" class="badge badge-default badge-pill"> {{feature.title?.toUpperCase() }} : {{feature.value}}</span>
             </span>
         </li>
     </ul>
