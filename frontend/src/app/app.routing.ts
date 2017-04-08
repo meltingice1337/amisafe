@@ -5,6 +5,7 @@ import { SearchComponent } from './search/search.component';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { CountryComponent } from './country/countryinfo.component';
+import { InfoComponent } from './main/info.component';
 
 
 const routes: Routes = [
@@ -12,9 +13,12 @@ const routes: Routes = [
         component: MainComponent,
         path: "",
         children: [
-            {  
-            path: ':country',
-            component: CountryComponent
+            {
+                path: ':country',
+                component: CountryComponent
+            }, {
+                path: "",
+                component: InfoComponent
             }
         ]
     }
@@ -28,4 +32,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents = [SearchComponent,MainComponent,CountryComponent];
+export const routingComponents = [SearchComponent, MainComponent, CountryComponent,InfoComponent];
