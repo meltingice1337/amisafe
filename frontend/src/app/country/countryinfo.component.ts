@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild, Inject, AfterViewInit } from '@angular/core';
 import { CountryInfoService} from './countryinfo.service';
+
 @Component({
   selector: 'countryinfo',
   templateUrl: './countryinfo.component.html',
