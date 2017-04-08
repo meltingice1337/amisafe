@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.inputclass{
+    width:100% ;
+    border: 1px solid grey;
+    padding:5px;
+    font-size:15px;
+}
+.completer-dropdown{
+    color:black;
+    font-size:15px;
+    width:94% !important ;
+    border-top:none !important;
+    text-align: left;
+}
+.completer-selected-row{
+    width:94%;
+    background-color:transparent !important;
+    color:black !important;
+    text-align: left;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
