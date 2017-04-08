@@ -1,5 +1,6 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.rethinkdb.*;
 import com.rethinkdb.net.Connection;
 import com.rethinkdb.net.Cursor;
 
@@ -19,16 +20,9 @@ public class Server {
         before((req, res) -> {
             res.header("Content-Type", "application/json");
         });
-
-        get("/hello", (req, res) ->  {
-            Cursor<HashMap> result =  RethinkDB.r
-                    .db("maindb")
-                    .table("countries")
-                    .run(RethinkDB.getConnection());
-
-            return result.toList().stream()
-                    .map(hashMap -> RethinkDB.objectToJson(hashMap))
-                    .collect(Collectors.toList());
+        path("/api/v1", () -> {
+            get("/aspects/:id",   (req, res)  -> CountryController.getCountryData(req.params(":id")));
+            get("/countries", (req,res) -> CountryController.getAllCountries());
         });
     }
 }
