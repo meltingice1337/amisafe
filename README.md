@@ -15,8 +15,8 @@ well, no, not really
 # Start backend
 
 - Dependencies
-- JAVA JDK http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html
-- RethinkDB https://rethinkdb.com/
+  - JAVA JDK http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html
+  - RethinkDB https://rethinkdb.com/
 
 - Clone the repo
 ```sh
@@ -33,7 +33,7 @@ mvn exec:java -Dexec.mainClass="Server"
 
 # Start frontend
 - Dependencies
-- NPM https://www.npmjs.com/
+  - NPM https://www.npmjs.com/
 
 - Clone the repo
 ```sh
