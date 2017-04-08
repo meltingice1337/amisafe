@@ -1,0 +1,30 @@
+{
+  "country": "Romania",
+  "rank": 24,
+  "aspects": [
+      {
+        "label": "Car deaths",
+        "type": "road_kills",
+        "features":[
+          {
+            "title": "percentage",
+            "value": 23.4
+          },
+          {
+            "title": "total",
+            "value": 2430
+          }
+          ]
+      },
+            {
+        "label": "Life expectany",
+        "type": "life_expectancy",
+        "features":[
+          {
+            "title": "years",
+            "value": 68
+          }
+          ]
+      }
+    ]
+}

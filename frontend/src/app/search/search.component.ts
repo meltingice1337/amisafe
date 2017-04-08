@@ -20,6 +20,7 @@ export class SearchComponent {
 
 public handleSelect(selectedItem:any){
   console.log(selectedItem);
+  if(selectedItem.title.length>0)
   this.router.navigate([selectedItem.title.toLowerCase()])
 }
 }
