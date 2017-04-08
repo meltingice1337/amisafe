@@ -1,22 +1,25 @@
+import java.util.HashMap;
+import java.util.List;
+
 /**
  * Created by meltingice on 08-Apr-17.
  */
 public class CountryData {
     private String country;
     private int rank;
-    private CountryAspect[] aspects;
+    private List<HashMap> aspects;
 
-    public CountryData(String country, int rank, CountryAspect[] aspects) {
+    public CountryData(String country, int rank, List<HashMap> aspects) {
         this.country = country;
         this.rank = rank;
         this.aspects = aspects;
     }
 
-    public CountryAspect[] getAspects() {
+    public List<HashMap> getAspects() {
         return aspects;
     }
 
-    public void setAspects(CountryAspect[] aspects) {
+    public void setAspects(List<HashMap> aspects) {
         this.aspects = aspects;
     }
 
