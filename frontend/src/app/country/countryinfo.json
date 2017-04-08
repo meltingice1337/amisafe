@@ -1,6 +1,7 @@
 {
   "country": "Romania",
   "rank": 24,
+  "iso": "ro",
   "aspects": [
       {
         "label": "Car deaths",

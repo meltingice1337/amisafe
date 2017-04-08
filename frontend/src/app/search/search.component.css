@@ -7,22 +7,28 @@
 }
 
 .logoAndInput {
-    margin-top: 25px;
+    margin-top:15%;
     font-size: 21px;
     text-align: center;
-
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
         -ms-animation: fadein 2s; /* Internet Explorer */
          -o-animation: fadein 2s; /* Opera < 12.1 */
             animation: fadein 2s;
 }
-
+.boxshadowclass{
+    box-shadow: 0px -2px 28px 0px rgba(0,0,0,0.75);
+}
 .backgroundcontainer{
-    background-image: url("/src/assets/images/romania.png");
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 0px -2px 28px 0px rgba(0,0,0,0.75);
-
+    height: 100%;
+    animation: fadein 5s;
 }
 
+@media screen and (max-width: 992px) {
+    .logoAndInput {
+        margin-top:0px;
+        padding-top:50px;
+    }
+}
