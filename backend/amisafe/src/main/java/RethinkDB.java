@@ -8,15 +8,23 @@ import java.io.IOException;
  * Created by meltingice on 08-Apr-17.
  */
 public class RethinkDB {
+    private static RethinkDB ourInstance = new RethinkDB();
 
-    public static final com.rethinkdb.RethinkDB r = com.rethinkdb.RethinkDB.r;
+    public static RethinkDB getInstance() {
+        return ourInstance;
+    }
 
-    public static Connection getConnection()
+    private RethinkDB() {
+    }
+
+    public final com.rethinkdb.RethinkDB r = com.rethinkdb.RethinkDB.r;
+
+    public Connection getConnection()
     {
         return  r.connection().hostname("localhost").port(28015).connect();
     }
 
-    public static <T> T jsonToObject(String json, Class<T> clazz) {
+    public <T> T jsonToObject(String json, Class<T> clazz) {
         try {
             ObjectMapper mapper = new ObjectMapper();
             return mapper.readValue(json, clazz);
@@ -25,7 +33,7 @@ public class RethinkDB {
         }
     }
 
-    public static String objectToJson(Object data) {
+    public String objectToJson(Object data) {
         try {
             ObjectMapper mapper = new ObjectMapper();
             mapper.enable(SerializationFeature.INDENT_OUTPUT);
