@@ -19,6 +19,7 @@ public class Server {
     {
         before((req, res) -> {
             res.header("Content-Type", "application/json");
+            res.header("Access-Control-Allow-Origin", "*");
         });
         path("/api/v1", () -> {
             get("/aspects/:id",   (req, res)  -> CountryController.getCountryData(req.params(":id")));
