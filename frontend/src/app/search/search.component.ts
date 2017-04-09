@@ -2,7 +2,6 @@ import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { CompleterService, CompleterData } from 'ng2-completer';
 import { Router, Route, ActivatedRoute } from '@angular/router';
 import { SearchService } from './search.service';
-import $ from 'jquery';
 
 @Component({
   selector: 'search',
