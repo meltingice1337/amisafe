@@ -5,7 +5,7 @@ import { ActivatedRoute,Router } from '@angular/router';
 @Component({
   selector: 'countryinfo',
   templateUrl: './countryinfo.component.html',
-  styleUrls: ['/countryinfo.component.css'],
+  styleUrls: ['./countryinfo.component.css'],
   providers: [CountryInfoService]
 
 })
