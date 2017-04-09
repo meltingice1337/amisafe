@@ -6,11 +6,11 @@ import 'rxjs/add/operator/map';
 export class CountryInfoService {
     constructor(private http: Http) { }
     getCountryInfo(country) {
-        return this.http.get('http://192.168.0.100:4567/api/v1/aspects/' + country.toLowerCase())
+        return this.http.get('http://138.201.118.243/api/v1/aspects/' + country.toLowerCase())
             .map((res) => res.json());
     }
     requestGraphData(type){
-        return this.http.get('http://192.168.0.100:4567/api/v1/aspect/' + type)
+        return this.http.get('http://138.201.118.243/api/v1/aspect/' + type)
             .map((res) => res.json());
     }
     sendCountryUrl(countryurl){
