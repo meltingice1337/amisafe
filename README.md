@@ -12,6 +12,7 @@ Have you ever wondered how safe is your country ? You can check it out now witho
 # Frontend technologies
 - Angular (v4)
 - ng2-completer https://github.com/oferh/ng2-completer
+- ng2-charts https://github.com/valor-software/ng2-charts
 
 
 # Start backend
