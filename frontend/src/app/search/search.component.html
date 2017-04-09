@@ -1,6 +1,6 @@
 <div [ngClass]="{'boxshadowclass': iso}"class=" backgroundcontainer col-md-12 "[ngStyle]="{'background-image': 'url(' + iso + ')'}">
     <div class="logoAndInput col-md-offset-4 col-md-4" >
-        <img class=" img-responsive" src="/src/assets/images/banner.png" />
+        <img class=" img-responsive" src="../../assets/images/banner.png" />
         <ng2-completer [(ngModel)]="searchStr" [datasource]="dataService" [minSearchLength]="3" inputClass="inputclass" (selected)="handleSelect($event)"></ng2-completer>
         <div style="margin-top:35%;"></div>
     </div>
