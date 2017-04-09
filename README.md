@@ -45,8 +45,36 @@ git clone https://github.com/meltingice1337/ggwp
 ```sh
 cd frontend
 ```
+- Change the ```IP``` and ```PORT``` to match your server
+
+countryinfo.service.ts
+```sh
+ getCountryInfo(country) {
+        return this.http.get('http://IP:PORT/api/v1/aspects/' + country.toLowerCase())
+            .map((res) => res.json());
+    }
+    requestGraphData(type) {
+        return this.http.get('http://IP:PORT/api/v1/aspect/' + type)
+            .map((res) => res.json());
+    }
+```
+
+search.service.ts
+```sh
+    getCountry() {
+        return this.http.get('http://IP:PORT/api/v1/countries').map(
+            (res) => res.json()
+        );
+    }
+```
+
 - Install the dependencies and run
 ```sh
 npm i
 npm start
+```
+
+- You can build the project so you can deploy using  (a ```dist``` folder will be created and you can directly upload it to any server)
+```sh
+npm run build
 ```
