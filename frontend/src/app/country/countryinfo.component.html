@@ -1,7 +1,6 @@
 <div class="col-md-8 col-md-offset-2">
     <p style="margin-top:15px;font-size:50px">{{country?.country}}
-        <span style="font-size:30px" class="badge badge-default"> #{{country?.rank}}</span>
-        <span style="font-size:20px"> safest country</span>
+        
     </p>
     <ul class="list-group">
         <li (click)="requestGraph(aspect.type)"*ngFor="let aspect of aspects" style="border-radius:0px;border-collapse:collapse" class="col-md-6 list-group-item justify-content-between aspectcell">
