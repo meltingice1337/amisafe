@@ -23,6 +23,8 @@ export class CountryComponent implements OnInit, OnDestroy {
     private router:Router) { }
 
   public ngOnInit() {
+    let countryurl = this.route.snapshot.params['country'];
+    console.log(countryurl);
     this.sub = this.route.params.subscribe(params => {
       let country = params['country'];
       if (country != "chart") {
@@ -35,12 +37,13 @@ export class CountryComponent implements OnInit, OnDestroy {
         );
       }
     });
+    this.countryInfoService.sendCountryUrl(countryurl);
   }
   public ngOnDestroy() {
     this.sub.unsubscribe();
   }
   public requestGraph(aspect_type){
-    this.router.navigate(["/charts/"+aspect_type.toLowerCase()])
+    this.router.navigate(['charts/'+aspect_type.toLowerCase()])
   }
 }
 

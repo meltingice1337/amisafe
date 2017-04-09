@@ -1,50 +1,63 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CountryInfoService } from '../country/countryinfo.service';
+
 
 @Component({
-    templateUrl: './chart.component.html'
+    templateUrl: './chart.component.html',
+    providers: [CountryInfoService]
 })
-export class ChartComponent {
-    
+export class ChartComponent implements OnInit {
+    sub: any;
+    datavalues = [];
+    datalabels = [];
+    details;
+    constructor(
+        private route: ActivatedRoute,
+        private countryInfoService: CountryInfoService
+    ) { }
+
+    public ngOnInit() {
+        this.sub = this.route.params.subscribe(params => {
+            let aspect_type = params['aspect_type'];
+            this.countryInfoService.requestGraphData(aspect_type).subscribe(
+                (data) => {
+                    console.log(data);
+                    let barCharD = [];
+                    this.details=data;
+                    console.log(data);
+                    for (var i = 0; i < data.data.length; i++) {
+                        // console.log(data.data[i].country);
+                        // console.log(data.data[i].features[0].value);
+                        barCharD.push({
+                            data: [data.data[i].features[0].value],
+                            label: data.data[i].country
+                        })
+                    }
+                    this.barChartData = barCharD;
+                }
+            );
+        });
+
+    }
+
     public barChartOptions: any = {
         scaleShowVerticalLines: false,
         responsive: true
     };
-    public barChartLabels: string[] = ['2006'];
+    public barChartLabels: string[] = [''];
     public barChartType: string = 'bar';
     public barChartLegend: boolean = false;
 
-    public barChartData: any[] = [
-        { data: [65], label: 'Series A' },
-
-    ];
+    public barChartData: any[] = [];
 
     // events
     public chartClicked(e: any): void {
         console.log(e);
+
     }
 
     public chartHovered(e: any): void {
         console.log(e);
-    }
-
-    public randomize(): void {
-        // Only Change 3 values
-        let data = [
-            Math.round(Math.random() * 100),
-            59,
-            80,
-            (Math.random() * 100),
-            56,
-            (Math.random() * 100),
-            40];
-        let clone = JSON.parse(JSON.stringify(this.barChartData));
-        clone[0].data = data;
-        this.barChartData = clone;
-        /**
-         * (My guess), for Angular to recognize the change in the dataset
-         * it has to change the dataset variable directly,
-         * so one way around it, is to clone the data, change it and then
-         * assign it;
-         */
     }
 }

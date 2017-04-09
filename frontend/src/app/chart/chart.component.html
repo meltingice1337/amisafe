@@ -1,13 +1,8 @@
-<div>
-  <div style="display: block">
-    <canvas baseChart
-            [datasets]="barChartData"
-            [labels]="barChartLabels"
-            [options]="barChartOptions"
-            [legend]="barChartLegend"
-            [chartType]="barChartType"
-            (chartHover)="chartHovered($event)"
-            (chartClick)="chartClicked($event)"></canvas>
-  </div>
-  <button (click)="randomize()">Update</button>
+<div *ngIf="barChartData?.length > 0" >
+
+    <div style="display: block ;padding:10px">
+        <h1 style="line-height:2.5;text-align: center;margin:0">{{details.label}}</h1>
+        <canvas style="padding:30px" baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+            [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div>
 </div>
