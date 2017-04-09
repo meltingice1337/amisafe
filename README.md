@@ -3,6 +3,8 @@
 
 well, no, not really
 
+Have you ever wondered how safe is your country ? You can check it out now without going on yahoo answers or finding answers on the third google page
+
 # Backend technologies
 - Sparkjava framework http://sparkjava.com/
 - rethinkdb as database
