@@ -17,9 +17,9 @@ export class SearchComponent implements OnInit {
   private items: any;
   innerHeight: any;
 
-  protected searchStr: string;
-  protected dataService: CompleterData;
-  protected searchData = [];
+  public searchStr: string;
+  public dataService: CompleterData;
+  public searchData = [];
 
   constructor(
     private completerService: CompleterService,
