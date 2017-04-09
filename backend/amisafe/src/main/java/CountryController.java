@@ -8,6 +8,7 @@ import com.rethinkdb.net.Cursor;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -17,7 +18,17 @@ public class CountryController {
 
     public static String getCountryData(String country)
     {
-        final String uppercaseCountry = country.substring(0,1).toUpperCase() + country.substring(1);
+        String splittedCountry="";
+        String[] splitted = country.split(" ");
+        for(int i=0;i<splitted.length;i++)
+        {
+            splittedCountry += splitted[i].substring(0,1).toUpperCase() + splitted[i].substring(1);
+            if(i + 1 < splitted.length)
+            {
+                splittedCountry += " ";
+            }
+        }
+        final String uppercaseCountry = splittedCountry;
         Cursor<HashMap> result =  RethinkDB.getInstance().r.
                 db("maindb")
                 .table("data")
@@ -40,11 +51,11 @@ public class CountryController {
     }
 
     public static String getAspect(String aspect) {
-        Cursor<HashMap>   result =  RethinkDB.getInstance().r.
+        Cursor<HashMap> result =  RethinkDB.getInstance().r.
                 db("maindb")
                 .table("data")
                 .filter( (t) -> t.g("type").eq(aspect))
                 .run( RethinkDB.getInstance().getConnection());
-        return RethinkDB.getInstance().objectToJson(result.toList());
+        return RethinkDB.getInstance().objectToJson(result.toList().get(0));
     }
 }
