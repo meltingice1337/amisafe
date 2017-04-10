@@ -61,7 +61,7 @@ export class SearchComponent implements OnInit {
   private checkRoute(): void {
     const country = this.router.routerState.snapshot.url.split('/');
     if (country.length === 2 && country[1].trim() !== '') {
-      this.handleSelect({ title: country[1] })
+      this.handleSelect({ title: decodeURI(country[1]) });
     }
   }
 
