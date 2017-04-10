@@ -153,3 +153,134 @@
 2017-04-09T03:29:10.707349900 468.546822s notice: All client connections closed.
 2017-04-09T03:29:10.707349901 468.546833s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
 2017-04-09T03:29:10.713349900 468.552770s notice: Storage engine shut down.
+2017-04-09T15:32:19.324871494 0.018867s notice: Recursively removing directory /home/darius/workspace/ggwp/rethinkdb/rethinkdb_data/tmp
+2017-04-09T15:32:19.337103661 0.031098s notice: Running rethinkdb 2.3.5~0xenial (GCC 5.3.1)...
+2017-04-09T15:32:19.348863680 0.042861s notice: Running on Linux 4.4.0-72-generic x86_64
+2017-04-09T15:32:19.349128819 0.043123s notice: Loading data from directory /home/darius/workspace/ggwp/rethinkdb/rethinkdb_data
+2017-04-09T15:32:19.407143002 0.101138s info: Automatically using cache size of 100 MB
+2017-04-09T15:32:19.408746234 0.102741s warn: Cache size does not leave much memory for server and query overhead (available memory: 665 MB).
+2017-04-09T15:32:19.409070389 0.103065s warn: Cache size is very low and may impact performance.
+2017-04-09T15:32:19.417028946 0.111024s notice: Listening for intracluster connections on port 29015
+2017-04-09T15:32:19.587834516 0.281829s notice: Listening for client driver connections on port 28015
+2017-04-09T15:32:19.588281570 0.282276s notice: Listening for administrative HTTP connections on port 8080
+2017-04-09T15:32:19.588285127 0.282279s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-04-09T15:32:19.588287106 0.282281s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-04-09T15:32:19.588289035 0.282283s notice: Listening on http addresses: 127.0.0.1, ::1
+2017-04-09T15:32:19.588290924 0.282285s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-04-09T15:32:19.588293549 0.282287s notice: Server ready, "DESKTOP_GI70U7I_qaf" 0b1fae84-e8b0-46d2-a3d2-340b14a15dbc
+2017-04-09T15:32:20.786699042 1.480694s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: Starting a new Raft election for term 8.
+2017-04-09T15:32:20.806287249 1.500282s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: This server is Raft leader for term 8. Latest log index is 20.
+2017-04-09T15:32:20.821545687 1.515540s info: Table cceae960-6a50-4622-81ee-2150075376b1: Starting a new Raft election for term 8.
+2017-04-09T15:32:20.866186781 1.560181s info: Table cceae960-6a50-4622-81ee-2150075376b1: This server is Raft leader for term 8. Latest log index is 20.
+2017-04-09T15:32:25.321050923 6.015045s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2017-04-09T15:32:25.321381897 6.015376s notice: Shutting down client connections...
+2017-04-09T15:32:25.321640450 6.015635s notice: All client connections closed.
+2017-04-09T15:32:25.321854480 6.015849s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-04-09T15:32:25.328970883 6.022965s notice: Storage engine shut down.
+2017-04-09T15:32:27.652758281 0.012327s notice: Running rethinkdb 2.3.5~0xenial (GCC 5.3.1)...
+2017-04-09T15:32:27.656837783 0.016408s notice: Running on Linux 4.4.0-72-generic x86_64
+2017-04-09T15:32:27.656997505 0.016565s notice: Loading data from directory /home/darius/workspace/ggwp/rethinkdb/rethinkdb_data
+2017-04-09T15:32:27.688481530 0.048050s info: Automatically using cache size of 100 MB
+2017-04-09T15:32:27.688814107 0.048382s warn: Cache size does not leave much memory for server and query overhead (available memory: 660 MB).
+2017-04-09T15:32:27.688828342 0.048396s warn: Cache size is very low and may impact performance.
+2017-04-09T15:32:27.689827836 0.049396s notice: Listening for intracluster connections on port 29015
+2017-04-09T15:32:27.771500946 0.131069s notice: Listening for client driver connections on port 28015
+2017-04-09T15:32:27.771976286 0.131544s notice: Listening for administrative HTTP connections on port 8080
+2017-04-09T15:32:27.771979544 0.131547s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-04-09T15:32:27.771981924 0.131550s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-04-09T15:32:27.771984329 0.131552s notice: Listening on http addresses: 127.0.0.1, ::1
+2017-04-09T15:32:27.771995216 0.131563s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-04-09T15:32:27.771998097 0.131566s notice: Server ready, "DESKTOP_GI70U7I_qaf" 0b1fae84-e8b0-46d2-a3d2-340b14a15dbc
+2017-04-09T15:32:29.447539943 1.807108s info: Table cceae960-6a50-4622-81ee-2150075376b1: Starting a new Raft election for term 9.
+2017-04-09T15:32:29.462803259 1.822371s info: Table cceae960-6a50-4622-81ee-2150075376b1: This server is Raft leader for term 9. Latest log index is 23.
+2017-04-09T15:32:29.622984928 1.982553s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: Starting a new Raft election for term 9.
+2017-04-09T15:32:29.635888137 1.995457s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: This server is Raft leader for term 9. Latest log index is 23.
+2017-04-10T15:59:36.111606582 0.033494s notice: Running rethinkdb 2.3.5~0xenial (GCC 5.3.1)...
+2017-04-10T15:59:36.124222985 0.046114s notice: Running on Linux 4.4.0-72-generic x86_64
+2017-04-10T15:59:36.124501812 0.046389s notice: Loading data from directory /home/darius/workspace/ggwp/rethinkdb/rethinkdb_data
+2017-04-10T15:59:36.201106762 0.122994s info: Automatically using cache size of 100 MB
+2017-04-10T15:59:36.204049275 0.125936s warn: Cache size does not leave much memory for server and query overhead (available memory: 647 MB).
+2017-04-10T15:59:36.204449052 0.126336s warn: Cache size is very low and may impact performance.
+2017-04-10T15:59:36.217656083 0.139543s notice: Listening for intracluster connections on port 29015
+2017-04-10T15:59:36.382501570 0.304389s notice: Listening for client driver connections on port 28015
+2017-04-10T15:59:36.383191043 0.305078s notice: Listening for administrative HTTP connections on port 8080
+2017-04-10T15:59:36.383198530 0.305085s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-04-10T15:59:36.383203709 0.305090s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-04-10T15:59:36.383227913 0.305115s notice: Listening on http addresses: 127.0.0.1, ::1
+2017-04-10T15:59:36.383234378 0.305121s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-04-10T15:59:36.383238708 0.305126s notice: Server ready, "DESKTOP_GI70U7I_qaf" 0b1fae84-e8b0-46d2-a3d2-340b14a15dbc
+2017-04-10T15:59:38.041323789 1.963211s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: Starting a new Raft election for term 10.
+2017-04-10T15:59:38.051127434 1.973014s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: This server is Raft leader for term 10. Latest log index is 26.
+2017-04-10T15:59:38.306332075 2.228219s info: Table cceae960-6a50-4622-81ee-2150075376b1: Starting a new Raft election for term 10.
+2017-04-10T15:59:38.328450470 2.250338s info: Table cceae960-6a50-4622-81ee-2150075376b1: This server is Raft leader for term 10. Latest log index is 26.
+2017-04-10T16:36:19.627821278 0.013652s notice: Running rethinkdb 2.3.5~0xenial (GCC 5.3.1)...
+2017-04-10T16:36:19.634517906 0.020350s notice: Running on Linux 4.4.0-72-generic x86_64
+2017-04-10T16:36:19.634732763 0.020562s notice: Loading data from directory /home/darius/workspace/ggwp/rethinkdb/rethinkdb_data
+2017-04-10T16:36:19.689069087 0.074899s info: Automatically using cache size of 100 MB
+2017-04-10T16:36:19.689456373 0.075286s warn: Cache size does not leave much memory for server and query overhead (available memory: 593 MB).
+2017-04-10T16:36:19.689464925 0.075294s warn: Cache size is very low and may impact performance.
+2017-04-10T16:36:19.691011327 0.076841s notice: Listening for intracluster connections on port 29015
+2017-04-10T16:36:19.792499577 0.178330s notice: Listening for client driver connections on port 28015
+2017-04-10T16:36:19.792976723 0.178806s notice: Listening for administrative HTTP connections on port 8080
+2017-04-10T16:36:19.792981121 0.178811s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-04-10T16:36:19.792983933 0.178813s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-04-10T16:36:19.792986310 0.178816s notice: Listening on http addresses: 127.0.0.1, ::1
+2017-04-10T16:36:19.792988632 0.178818s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-04-10T16:36:19.792991147 0.178821s notice: Server ready, "DESKTOP_GI70U7I_qaf" 0b1fae84-e8b0-46d2-a3d2-340b14a15dbc
+2017-04-10T16:36:20.947136389 1.332966s info: Table cceae960-6a50-4622-81ee-2150075376b1: Starting a new Raft election for term 11.
+2017-04-10T16:36:20.959876973 1.345707s info: Table cceae960-6a50-4622-81ee-2150075376b1: This server is Raft leader for term 11. Latest log index is 29.
+2017-04-10T16:36:21.415145349 1.800976s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: Starting a new Raft election for term 11.
+2017-04-10T16:36:21.437823793 1.823654s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: This server is Raft leader for term 11. Latest log index is 29.
+2017-04-10T16:37:16.796368952 0.032882s notice: Running rethinkdb 2.3.5~0xenial (GCC 5.3.1)...
+2017-04-10T16:37:16.815667322 0.052186s notice: Running on Linux 4.4.0-72-generic x86_64
+2017-04-10T16:37:16.815957403 0.052470s notice: Loading data from directory /home/darius/workspace/ggwp/rethinkdb/rethinkdb_data
+2017-04-10T16:37:16.889571963 0.126085s info: Automatically using cache size of 100 MB
+2017-04-10T16:37:16.889927055 0.126440s warn: Cache size does not leave much memory for server and query overhead (available memory: 653 MB).
+2017-04-10T16:37:16.889934799 0.126447s warn: Cache size is very low and may impact performance.
+2017-04-10T16:37:16.891162566 0.127675s notice: Listening for intracluster connections on port 29015
+2017-04-10T16:37:17.064785644 0.301299s notice: Listening for client driver connections on port 28015
+2017-04-10T16:37:17.067857819 0.304371s notice: Listening for administrative HTTP connections on port 8080
+2017-04-10T16:37:17.067863029 0.304375s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-04-10T16:37:17.067865961 0.304378s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-04-10T16:37:17.067869221 0.304382s notice: Listening on http addresses: 127.0.0.1, ::1
+2017-04-10T16:37:17.067871609 0.304384s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-04-10T16:37:17.067873997 0.304386s notice: Server ready, "DESKTOP_GI70U7I_qaf" 0b1fae84-e8b0-46d2-a3d2-340b14a15dbc
+2017-04-10T16:37:18.124229765 1.360743s info: Table cceae960-6a50-4622-81ee-2150075376b1: Starting a new Raft election for term 12.
+2017-04-10T16:37:18.135338741 1.371852s info: Table cceae960-6a50-4622-81ee-2150075376b1: This server is Raft leader for term 12. Latest log index is 32.
+2017-04-10T16:37:18.842716313 2.079229s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: Starting a new Raft election for term 12.
+2017-04-10T16:37:18.853709292 2.090222s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: This server is Raft leader for term 12. Latest log index is 32.
+2017-04-10T16:38:09.292595780 0.013297s notice: Running rethinkdb 2.3.5~0xenial (GCC 5.3.1)...
+2017-04-10T16:38:09.308216785 0.028922s notice: Running on Linux 4.4.0-72-generic x86_64
+2017-04-10T16:38:09.308493825 0.029194s notice: Loading data from directory /home/darius/workspace/ggwp/rethinkdb/rethinkdb_data
+2017-04-10T16:38:09.341193846 0.061894s info: Automatically using cache size of 100 MB
+2017-04-10T16:38:09.341523094 0.062223s warn: Cache size does not leave much memory for server and query overhead (available memory: 663 MB).
+2017-04-10T16:38:09.341806922 0.062507s warn: Cache size is very low and may impact performance.
+2017-04-10T16:38:09.343019556 0.063720s notice: Listening for intracluster connections on port 29015
+2017-04-10T16:38:09.430529670 0.151230s notice: Listening for client driver connections on port 28015
+2017-04-10T16:38:09.430993800 0.151694s notice: Listening for administrative HTTP connections on port 8080
+2017-04-10T16:38:09.430998103 0.151698s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-04-10T16:38:09.431009177 0.151709s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-04-10T16:38:09.431021122 0.151721s notice: Listening on http addresses: 127.0.0.1, ::1
+2017-04-10T16:38:09.431023270 0.151723s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-04-10T16:38:09.431025342 0.151725s notice: Server ready, "DESKTOP_GI70U7I_qaf" 0b1fae84-e8b0-46d2-a3d2-340b14a15dbc
+2017-04-10T16:38:10.548240428 1.268941s info: Table cceae960-6a50-4622-81ee-2150075376b1: Starting a new Raft election for term 13.
+2017-04-10T16:38:10.562889221 1.283590s info: Table cceae960-6a50-4622-81ee-2150075376b1: This server is Raft leader for term 13. Latest log index is 35.
+2017-04-10T16:38:10.889292770 1.609993s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: Starting a new Raft election for term 13.
+2017-04-10T16:38:10.908820582 1.629521s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: This server is Raft leader for term 13. Latest log index is 35.
+2017-04-10T16:41:10.692439372 0.020761s notice: Running rethinkdb 2.3.5~0xenial (GCC 5.3.1)...
+2017-04-10T16:41:10.707666752 0.035993s notice: Running on Linux 4.4.0-72-generic x86_64
+2017-04-10T16:41:10.707974328 0.036296s notice: Loading data from directory /home/darius/workspace/ggwp/rethinkdb/rethinkdb_data
+2017-04-10T16:41:10.748005666 0.076328s info: Automatically using cache size of 100 MB
+2017-04-10T16:41:10.748325729 0.076647s warn: Cache size does not leave much memory for server and query overhead (available memory: 653 MB).
+2017-04-10T16:41:10.748334395 0.076656s warn: Cache size is very low and may impact performance.
+2017-04-10T16:41:10.853950269 0.182272s notice: Listening for intracluster connections on port 29015
+2017-04-10T16:41:11.074498132 0.402820s notice: Listening for client driver connections on port 28015
+2017-04-10T16:41:11.075198076 0.403520s notice: Listening for administrative HTTP connections on port 8080
+2017-04-10T16:41:11.081474099 0.409797s notice: Listening on cluster addresses: 127.0.0.1, 172.31.1.100, ::1, 2a01:4f8:c17:42ba::2, fe80::5054:a2ff:fe01:bbf0%2
+2017-04-10T16:41:11.092313237 0.420636s notice: Listening on driver addresses: 127.0.0.1, 172.31.1.100, ::1, 2a01:4f8:c17:42ba::2, fe80::5054:a2ff:fe01:bbf0%2
+2017-04-10T16:41:11.094863648 0.423185s notice: Listening on http addresses: 127.0.0.1, 172.31.1.100, ::1, 2a01:4f8:c17:42ba::2, fe80::5054:a2ff:fe01:bbf0%2
+2017-04-10T16:41:11.095294135 0.423616s notice: Server ready, "DESKTOP_GI70U7I_qaf" 0b1fae84-e8b0-46d2-a3d2-340b14a15dbc
+2017-04-10T16:41:12.505164823 1.833487s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: Starting a new Raft election for term 14.
+2017-04-10T16:41:12.514615215 1.842937s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: This server is Raft leader for term 14. Latest log index is 38.
+2017-04-10T16:41:12.653392575 1.981715s info: Table cceae960-6a50-4622-81ee-2150075376b1: Starting a new Raft election for term 14.
+2017-04-10T16:41:12.665873757 1.994196s info: Table cceae960-6a50-4622-81ee-2150075376b1: This server is Raft leader for term 14. Latest log index is 38.
