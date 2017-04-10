@@ -29,6 +29,8 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.iso = 'default';
+
     this.searchService.getCountry().subscribe(
       (data) => {
         this.items = data;
@@ -49,7 +51,6 @@ export class SearchComponent implements OnInit {
     }
 
     this.iso = this.items.find((val, i, obj) => val.name.toLowerCase() === selectedItem.title.toLowerCase()).iso.toLowerCase();
-    this.iso = '../../assets/images/flags/' + this.iso + '.png';
     // console.log(this.iso);
     if (selectedItem.title.length > 0) {
       this.router.navigate([selectedItem.title.toLowerCase()]);

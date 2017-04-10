@@ -4,7 +4,8 @@
 /dist
 /tmp
 /out-tsc
-
+npm-debug.log
+.DS_Store
 # dependencies
 /node_modules
 
