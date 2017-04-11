@@ -26,10 +26,14 @@ import { AppRoutingModule, routingComponents } from './app.routing';
     {
       deps: [XHRBackend, RequestOptions],
       provide: HttpInterceptor,
-      useFactory: (backend: XHRBackend, defaultOptions: RequestOptions) =>
-        new HttpInterceptor(backend, defaultOptions),
+      useFactory: HttpInterceptorFactory
     }
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+export function HttpInterceptorFactory(backend: XHRBackend, defaultOptions: RequestOptions) {
+  return new HttpInterceptor(backend, defaultOptions);
+}
