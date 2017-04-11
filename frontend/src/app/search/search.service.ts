@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 export class SearchService {
     constructor(private http: Http) { }
     getCountry() {
-        return this.http.get('http://ncsf.ro/api/v1/countries').map(
+        return this.http.get('https://ncsf.ro/api/v1/countries').map(
             (res) => res.json()
         );
     }
