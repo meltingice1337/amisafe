@@ -12,23 +12,23 @@ import { ChartComponent } from './chart/chart.component';
 const routes: Routes = [
     {
         component: MainComponent,
-        path: "",
+        path: '',
         children: [
             {
                 path: ':country',
                 component: CountryComponent
             }, {
-                path: "",
+                path: '',
                 component: InfoComponent
             }, {
-                path: "charts/:aspect_type",
+                path: 'charts/:aspect_type',
                 component: ChartComponent
             }
         ]
     }
 
 
-]
+];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
@@ -36,4 +36,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents = [SearchComponent, MainComponent, CountryComponent,InfoComponent,ChartComponent];
+export const routingComponents = [SearchComponent, MainComponent, CountryComponent, InfoComponent, ChartComponent];
