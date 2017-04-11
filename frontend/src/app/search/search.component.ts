@@ -39,6 +39,10 @@ export class SearchComponent implements OnInit {
         }
         this.checkRoute();
         // console.log(this.searchData);
+      },
+      (error) => {
+        this.iso = 'default';
+        this.router.navigate(['/']);
       }
     );
     this.innerHeight = (window.screen.height);

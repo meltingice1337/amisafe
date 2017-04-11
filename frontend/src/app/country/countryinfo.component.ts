@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild, Inject, OnDestroy } from '@angular/core';
 import { CountryInfoService } from './countryinfo.service';
-import { ActivatedRoute,Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'countryinfo',
@@ -20,19 +20,22 @@ export class CountryComponent implements OnInit, OnDestroy {
   constructor(
     private countryInfoService: CountryInfoService,
     private route: ActivatedRoute,
-    private router:Router) { }
+    private router: Router) { }
 
   public ngOnInit() {
-    let countryurl = this.route.snapshot.params['country'];
+    const countryurl = this.route.snapshot.params['country'];
     console.log(countryurl);
     this.sub = this.route.params.subscribe(params => {
-      let country = params['country'];
-      if (country != "chart") {
+      const country = params['country'];
+      if (country !== 'chart') {
         this.countryInfoService.getCountryInfo(country).subscribe(
           (data) => {
-            console.log(data)
+            console.log(data);
             this.country = data;
             this.aspects = data.aspects;
+          },
+          (error) => {
+            this.router.navigate(['/']);
           }
         );
       }
@@ -42,8 +45,8 @@ export class CountryComponent implements OnInit, OnDestroy {
   public ngOnDestroy() {
     this.sub.unsubscribe();
   }
-  public requestGraph(aspect_type){
-    this.router.navigate(['charts/'+aspect_type.toLowerCase()])
+  public requestGraph(aspect_type) {
+    this.router.navigate(['charts/' + aspect_type.toLowerCase()]);
   }
 }
 
