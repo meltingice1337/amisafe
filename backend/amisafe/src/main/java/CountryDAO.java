@@ -13,7 +13,11 @@ public class CountryDAO {
         String[] splitted = country.split(" ");
         for(int i=0;i<splitted.length;i++)
         {
-            splittedCountry += splitted[i].substring(0,1).toUpperCase() + splitted[i].substring(1);
+            if(!splitted[i].equals("and"))
+                splittedCountry += splitted[i].substring(0,1).toUpperCase() + splitted[i].substring(1);
+            else
+                splittedCountry += splitted[i];
+
             if(i + 1 < splitted.length)
             {
                 splittedCountry += " ";
