@@ -7,7 +7,6 @@ import { SearchService } from './search.service';
   selector: 'search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css'],
-  providers: [SearchService]
 
 })
 export class SearchComponent implements OnInit {
@@ -29,22 +28,23 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.iso = 'default';
-
     this.searchService.getCountries().subscribe(
       (data) => {
         this.items = data;
         for (let i = 0; i < data.length; i++) {
           this.searchData.push(data[i].name);
         }
-        this.checkRoute();
         // console.log(this.searchData);
       },
       (error) => {
-        this.iso = 'default';
+        this.searchService.flagChange.next('default');
         this.router.navigate(['/']);
       }
     );
+
+    this.searchService.flagChange
+      .subscribe((iso) => this.iso = iso);
+
     this.innerHeight = (window.screen.height);
     // console.log(innerHeight);
   }
@@ -59,23 +59,11 @@ export class SearchComponent implements OnInit {
       return;
     }
 
-    this.iso = item.iso.toLowerCase();
+    this.searchService.flagChange.next(item.iso.toLowerCase());
     // console.log(this.iso);
     if (selectedItem.title.length > 0) {
       this.router.navigate([this.iso]);
     }
 
   }
-
-  private checkRoute(): void {
-    const route = this.router.routerState.snapshot.url.split('/');
-    if (route.length === 2 && route[1].trim() !== '') {
-      const country = route[1];
-      const item = this.items.find((val, i, obj) => val.iso.toLowerCase() === country.toLowerCase());
-      if (item) {
-        this.iso = item.iso.toLowerCase();
-      }
-    }
-  }
-
 }

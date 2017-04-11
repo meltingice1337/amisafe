@@ -34,7 +34,6 @@ public class CountryDAO {
                 ).without("data"))
                 .run( RethinkDB.getInstance().getConnection());
         CountryData cd = new CountryData(country, 23,  result.toList());
-
         return cd;
     }
 
@@ -46,12 +45,14 @@ public class CountryDAO {
         return result.toList();
     }
 
-    public static List getAspect(String aspect) {
+    public static HashMap getAspect(String aspect) {
         Cursor<HashMap> result =  RethinkDB.getInstance().r.
                 db("maindb")
                 .table("data")
                 .filter( (t) -> t.g("type").eq(aspect))
                 .run( RethinkDB.getInstance().getConnection());
-        return result.toList();
+        if(!result.hasNext())
+            return null;
+        return result.next();
     }
 }

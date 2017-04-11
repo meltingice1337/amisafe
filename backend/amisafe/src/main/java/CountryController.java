@@ -37,11 +37,11 @@ public class CountryController {
 
     public static String getAspect(Request request, Response response) {
         String aspect = request.params(":aspect");
-        List countryAspect = CountryDAO.getAspect(aspect);
-        if(countryAspect.size() != 1){
+        HashMap countryAspect = CountryDAO.getAspect(aspect);
+        if(countryAspect == null){
             response.status(404);
             return  "Not found";
         }
-        return RethinkDB.getInstance().objectToJson(countryAspect.get(0));
+        return RethinkDB.getInstance().objectToJson(countryAspect);
     }
 }

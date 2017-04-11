@@ -1,6 +1,8 @@
 import { Component, OnInit, ElementRef, ViewChild, Inject, OnDestroy } from '@angular/core';
-import { CountryInfoService } from './countryinfo.service';
 import { ActivatedRoute, Router } from '@angular/router';
+
+import { SearchService } from '../search/search.service';
+import { CountryInfoService } from './countryinfo.service';
 
 @Component({
   selector: 'countryinfo',
@@ -19,13 +21,16 @@ export class CountryComponent implements OnInit, OnDestroy {
 
   constructor(
     private countryInfoService: CountryInfoService,
+    private searchService: SearchService,
     private route: ActivatedRoute,
     private router: Router) { }
 
   public ngOnInit() {
     const countryurl = this.route.snapshot.params['country'];
     this.sub = this.route.params.subscribe(params => {
+      console.log('yas2');
       const country = params['country'];
+      this.searchService.flagChange.next(country);
       if (country !== 'chart') {
         this.countryInfoService.getCountryInfo(country).subscribe(
           (data) => {

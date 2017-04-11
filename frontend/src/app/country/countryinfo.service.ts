@@ -15,7 +15,7 @@ export class CountryInfoService {
     }
 
     requestGraphData(type): Observable<any> {
-        return this.http.get('/v1/aspect/' + type)
+        return this.http.get('/api/v1/aspect/' + type)
             .map((res) => res.json())
             .catch((error: Response | any) => Observable.throw(error));
     }
