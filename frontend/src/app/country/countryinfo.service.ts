@@ -9,12 +9,12 @@ export class CountryInfoService {
         return this.http.get('http://ncsf.ro/api/v1/aspects/' + country.toLowerCase())
             .map((res) => res.json());
     }
-    requestGraphData(type){
+    requestGraphData(type) {
         return this.http.get('http://ncsf.ro/api/v1/aspect/' + type)
             .map((res) => res.json());
     }
-    sendCountryUrl(countryurl){
-       // console.log(countryurl);
+    sendCountryUrl(countryurl) {
+        // console.log(countryurl);
     }
 
 }
