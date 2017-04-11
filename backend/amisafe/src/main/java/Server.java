@@ -22,7 +22,7 @@ public class Server {
             res.header("Access-Control-Allow-Origin", "*");
         });
         path("/api/v1", () -> {
-            get("/aspects/:country",   (req, res)  -> CountryController.getCountryData(req,res));
+            get("/aspects/:iso",   (req, res)  -> CountryController.getCountryData(req,res));
             get("/aspect/:aspect", (req,res) -> CountryController.getAspect(req,res));
             get("/countries", (req,res) -> CountryController.getAllCountries(req,res));
         });

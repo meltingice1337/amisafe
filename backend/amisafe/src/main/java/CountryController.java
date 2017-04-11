@@ -17,19 +17,16 @@ import java.util.stream.Collectors;
  */
 public class CountryController {
     public static String getCountryData(Request request, Response response) {
-        String country  = request.params(":country");
-        CountryData countryData = CountryDAO.getCountryData(country);
+        String iso  = request.params(":iso");
 
-        boolean hasFeatures = false;
-        for(HashMap h : countryData.getAspects()) {
-            List o =(List) h.get("features");
-            if(o.size() != 0)
-                hasFeatures = true;
-        }
-        if(!hasFeatures) {
+        Country country = CountryDAO.getCountry(iso.toUpperCase());
+        if(country == null)
+        {
             response.status(404);
             return "Not Found";
         }
+        CountryData countryData = CountryDAO.getCountryData(country.getName());
+
         return RethinkDB.getInstance().objectToJson(countryData);
     }
 

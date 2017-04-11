@@ -31,7 +31,7 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
     this.iso = 'default';
 
-    this.searchService.getCountry().subscribe(
+    this.searchService.getCountries().subscribe(
       (data) => {
         this.items = data;
         for (let i = 0; i < data.length; i++) {
@@ -62,15 +62,19 @@ export class SearchComponent implements OnInit {
     this.iso = item.iso.toLowerCase();
     // console.log(this.iso);
     if (selectedItem.title.length > 0) {
-      this.router.navigate([selectedItem.title.toLowerCase()]);
+      this.router.navigate([this.iso]);
     }
 
   }
 
   private checkRoute(): void {
-    const country = this.router.routerState.snapshot.url.split('/');
-    if (country.length === 2 && country[1].trim() !== '') {
-      this.handleSelect({ title: decodeURI(country[1]) });
+    const route = this.router.routerState.snapshot.url.split('/');
+    if (route.length === 2 && route[1].trim() !== '') {
+      const country = route[1];
+      const item = this.items.find((val, i, obj) => val.iso.toLowerCase() === country.toLowerCase());
+      if (item) {
+        this.iso = item.iso.toLowerCase();
+      }
     }
   }
 
