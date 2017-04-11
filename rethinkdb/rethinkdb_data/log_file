@@ -284,3 +284,20 @@
 2017-04-10T16:41:12.514615215 1.842937s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: This server is Raft leader for term 14. Latest log index is 38.
 2017-04-10T16:41:12.653392575 1.981715s info: Table cceae960-6a50-4622-81ee-2150075376b1: Starting a new Raft election for term 14.
 2017-04-10T16:41:12.665873757 1.994196s info: Table cceae960-6a50-4622-81ee-2150075376b1: This server is Raft leader for term 14. Latest log index is 38.
+2017-04-11T21:57:06.257765800 0.035505s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-04-11T21:57:06.259265500 0.036457s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-04-11T21:57:06.259265501 0.036592s notice: Loading data from directory C:\\Users\\meltingice\\Documents\\GitHub\\ggwp\\rethinkdb\\rethinkdb_data
+2017-04-11T21:57:06.291770800 0.069243s info: Automatically using cache size of 100 MB
+2017-04-11T21:57:06.291770801 0.069255s warn: Cache size is very low and may impact performance.
+2017-04-11T21:57:06.300279300 0.077823s notice: Listening for intracluster connections on port 29015
+2017-04-11T21:57:06.376280900 0.153352s notice: Listening for client driver connections on port 28015
+2017-04-11T21:57:06.376280901 0.153622s notice: Listening for administrative HTTP connections on port 8080
+2017-04-11T21:57:06.376280902 0.153624s notice: Listening on cluster address: 127.0.0.1
+2017-04-11T21:57:06.376280903 0.153626s notice: Listening on driver address: 127.0.0.1
+2017-04-11T21:57:06.376280904 0.153627s notice: Listening on http address: 127.0.0.1
+2017-04-11T21:57:06.376280905 0.153629s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-04-11T21:57:06.376280906 0.153641s notice: Server ready, "DESKTOP_GI70U7I_qaf" 0b1fae84-e8b0-46d2-a3d2-340b14a15dbc
+2017-04-11T21:57:07.363403600 1.140655s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: Starting a new Raft election for term 15.
+2017-04-11T21:57:07.372899200 1.150104s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: This server is Raft leader for term 15. Latest log index is 41.
+2017-04-11T21:57:08.208997700 1.986077s info: Table cceae960-6a50-4622-81ee-2150075376b1: Starting a new Raft election for term 15.
+2017-04-11T21:57:08.223999500 2.001538s info: Table cceae960-6a50-4622-81ee-2150075376b1: This server is Raft leader for term 15. Latest log index is 41.
