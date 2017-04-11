@@ -54,7 +54,12 @@ export class SearchComponent implements OnInit {
       return;
     }
 
-    this.iso = this.items.find((val, i, obj) => val.name.toLowerCase() === selectedItem.title.toLowerCase()).iso.toLowerCase();
+    const item = this.items.find((val, i, obj) => val.name.toLowerCase() === selectedItem.title.toLowerCase());
+    if (!item) {
+      return;
+    }
+
+    this.iso = item.iso.toLowerCase();
     // console.log(this.iso);
     if (selectedItem.title.length > 0) {
       this.router.navigate([selectedItem.title.toLowerCase()]);

@@ -24,7 +24,6 @@ export class CountryComponent implements OnInit, OnDestroy {
 
   public ngOnInit() {
     const countryurl = this.route.snapshot.params['country'];
-    console.log(countryurl);
     this.sub = this.route.params.subscribe(params => {
       const country = params['country'];
       if (country !== 'chart') {
@@ -40,7 +39,6 @@ export class CountryComponent implements OnInit, OnDestroy {
         );
       }
     });
-    this.countryInfoService.sendCountryUrl(countryurl);
   }
   public ngOnDestroy() {
     this.sub.unsubscribe();
