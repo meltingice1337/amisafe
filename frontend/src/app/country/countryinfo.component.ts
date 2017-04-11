@@ -29,20 +29,21 @@ export class CountryComponent implements OnInit, OnDestroy {
     const countryurl = this.route.snapshot.params['country'];
     this.sub = this.route.params.subscribe(params => {
       console.log('yas2');
-      const country = params['country'];
-      this.searchService.flagChange.next(country);
-      if (country !== 'chart') {
-        this.countryInfoService.getCountryInfo(country).subscribe(
-          (data) => {
-            console.log(data);
-            this.country = data;
-            this.aspects = data.aspects;
-          },
-          (error) => {
-            this.router.navigate(['/']);
-          }
-        );
+      let country = params['country'];
+      if (!country) {
+        country = 'default';
       }
+      this.searchService.flagChange.next(country);
+      this.countryInfoService.getCountryInfo(country).subscribe(
+        (data) => {
+          console.log(data);
+          this.country = data;
+          this.aspects = data.aspects;
+        },
+        (error) => {
+          this.router.navigate(['/']);
+        }
+      );
     });
   }
   public ngOnDestroy() {

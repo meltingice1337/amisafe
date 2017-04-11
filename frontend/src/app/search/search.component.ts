@@ -64,6 +64,5 @@ export class SearchComponent implements OnInit {
     if (selectedItem.title.length > 0) {
       this.router.navigate([this.iso]);
     }
-
   }
 }

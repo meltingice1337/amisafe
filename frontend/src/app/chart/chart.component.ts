@@ -1,3 +1,4 @@
+import { SearchService } from '../search/search.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CountryInfoService } from '../country/countryinfo.service';
@@ -12,27 +13,40 @@ export class ChartComponent implements OnInit {
     datavalues = [];
     datalabels = [];
     details;
+
+    public barChartOptions: any = {
+        scaleShowVerticalLines: false,
+        responsive: true
+    };
+    public barChartLabels: string[] = [''];
+    public barChartType = 'bar';
+    public barChartLegend = false;
+
+    public barChartData: any[] = [];
+
     constructor(
         private route: ActivatedRoute,
-        private countryInfoService: CountryInfoService
+        private countryInfoService: CountryInfoService,
+        private searchService: SearchService
     ) { }
 
     public ngOnInit() {
+        this.searchService.flagChange.next('default');
         this.sub = this.route.params.subscribe(params => {
-            let aspect_type = params['aspect_type'];
+            const aspect_type = params['aspect_type'];
             this.countryInfoService.requestGraphData(aspect_type).subscribe(
                 (data) => {
                     console.log(data);
-                    let barCharD = [];
-                    this.details=data;
+                    const barCharD = [];
+                    this.details = data;
                     console.log(data);
-                    for (var i = 0; i < data.data.length; i++) {
+                    for (let i = 0; i < data.data.length; i++) {
                         // console.log(data.data[i].country);
                         // console.log(data.data[i].features[0].value);
                         barCharD.push({
                             data: [data.data[i].features[0].value],
                             label: data.data[i].country
-                        })
+                        });
                     }
                     this.barChartData = barCharD;
                 }
@@ -40,16 +54,6 @@ export class ChartComponent implements OnInit {
         });
 
     }
-
-    public barChartOptions: any = {
-        scaleShowVerticalLines: false,
-        responsive: true
-    };
-    public barChartLabels: string[] = [''];
-    public barChartType: string = 'bar';
-    public barChartLegend: boolean = false;
-
-    public barChartData: any[] = [];
 
     // events
     public chartClicked(e: any): void {

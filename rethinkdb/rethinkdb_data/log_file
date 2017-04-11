@@ -410,3 +410,24 @@
 2017-04-12T00:38:03.081526300 1565.917578s notice: All client connections closed.
 2017-04-12T00:38:03.081526301 1565.917590s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
 2017-04-12T00:38:03.100528600 1565.936608s notice: Storage engine shut down.
+2017-04-12T01:03:26.819686200 0.044965s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-04-12T01:03:26.821184600 0.045903s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-04-12T01:03:26.821184601 0.045952s notice: Loading data from directory C:\\Users\\meltingice\\Documents\\GitHub\\ggwp\\rethinkdb\\rethinkdb_data
+2017-04-12T01:03:26.856690100 0.081767s info: Automatically using cache size of 1198 MB
+2017-04-12T01:03:26.866191600 0.090988s notice: Listening for intracluster connections on port 29015
+2017-04-12T01:03:26.938200300 0.163153s notice: Listening for client driver connections on port 28015
+2017-04-12T01:03:26.938200301 0.163325s notice: Listening for administrative HTTP connections on port 8080
+2017-04-12T01:03:26.938200302 0.163328s notice: Listening on cluster address: 127.0.0.1
+2017-04-12T01:03:26.938200303 0.163329s notice: Listening on driver address: 127.0.0.1
+2017-04-12T01:03:26.938200304 0.163330s notice: Listening on http address: 127.0.0.1
+2017-04-12T01:03:26.938701900 0.163332s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-04-12T01:03:26.938701901 0.163333s notice: Server ready, "DESKTOP_GI70U7I_qaf" 0b1fae84-e8b0-46d2-a3d2-340b14a15dbc
+2017-04-12T01:03:28.268917300 1.493728s info: Table cceae960-6a50-4622-81ee-2150075376b1: Starting a new Raft election for term 21.
+2017-04-12T01:03:28.278418300 1.503350s info: Table cceae960-6a50-4622-81ee-2150075376b1: This server is Raft leader for term 21. Latest log index is 59.
+2017-04-12T01:03:28.510455700 1.735255s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: Starting a new Raft election for term 21.
+2017-04-12T01:03:28.530939500 1.755776s info: Table 908336b9-e9ce-4b54-ad1d-c45b82c3b2c9: This server is Raft leader for term 21. Latest log index is 59.
+2017-04-12T01:08:24.172204100 297.397157s notice: Server got Control-C; shutting down...
+2017-04-12T01:08:24.173203800 297.397965s notice: Shutting down client connections...
+2017-04-12T01:08:24.178704600 297.403679s notice: All client connections closed.
+2017-04-12T01:08:24.178704601 297.403688s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-04-12T01:08:24.195206400 297.419921s notice: Storage engine shut down.
