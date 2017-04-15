@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-declare const ga: Function;
+declare let ga: Function;
 
 @Component({
   selector: 'app-root',
