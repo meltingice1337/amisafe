@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2dbf4f76-03de-43a2-a89d-c10cb6a39f68" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../rethinkdb/rethinkdb_data/908336b9-e9ce-4b54-ad1d-c45b82c3b2c9" afterPath="$PROJECT_DIR$/../../rethinkdb/rethinkdb_data/908336b9-e9ce-4b54-ad1d-c45b82c3b2c9" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../rethinkdb/rethinkdb_data/cceae960-6a50-4622-81ee-2150075376b1" afterPath="$PROJECT_DIR$/../../rethinkdb/rethinkdb_data/cceae960-6a50-4622-81ee-2150075376b1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../rethinkdb/rethinkdb_data/metadata" afterPath="$PROJECT_DIR$/../../rethinkdb/rethinkdb_data/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../frontend/src/app/country/countryinfo.component.ts" afterPath="$PROJECT_DIR$/../../frontend/src/app/country/countryinfo.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../frontend/src/app/search/search.component.ts" afterPath="$PROJECT_DIR$/../../frontend/src/app/search/search.component.ts" />
-    </list>
+    <list default="true" id="2dbf4f76-03de-43a2-a89d-c10cb6a39f68" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -500,7 +493,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.5208333" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.47916666" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.47916666" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
