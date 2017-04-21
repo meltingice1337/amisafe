@@ -15,29 +15,36 @@ import java.util.stream.Collectors;
 /**
  * Created by meltingice on 08-Apr-17.
  */
-public class CountryController {
-    public static String getCountryData(Request request, Response response) {
+class CountryController {
+    private CountryDAO countryDAO;
+
+    CountryController(CountryDAO countryDAO)
+    {
+        this.countryDAO = countryDAO;
+    }
+
+    public String getCountryData(Request request, Response response) {
         String iso  = request.params(":iso");
 
-        Country country = CountryDAO.getCountry(iso.toUpperCase());
+        Country country = countryDAO.getCountry(iso.toUpperCase());
         if(country == null)
         {
             response.status(404);
             return "Not Found";
         }
-        CountryData countryData = CountryDAO.getCountryData(country.getName());
+        CountryData countryData = countryDAO.getCountryData(country.getName());
 
         return RethinkDB.getInstance().objectToJson(countryData);
     }
 
-    public static String getAllCountries(Request request, Response response) {
-        List countries = CountryDAO.getAllCountries();
+    public String getAllCountries(Request request, Response response) {
+        List countries = countryDAO.getAllCountries();
         return RethinkDB.getInstance().objectToJson(countries);
     }
 
-    public static String getAspect(Request request, Response response) {
+    public String getAspect(Request request, Response response) {
         String aspect = request.params(":aspect");
-        HashMap countryAspect = CountryDAO.getAspect(aspect);
+        HashMap countryAspect = countryDAO.getAspect(aspect);
         if(countryAspect == null){
             response.status(404);
             return  "Not found";
